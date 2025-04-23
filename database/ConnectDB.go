@@ -8,7 +8,7 @@ import (
 var DB *pgxpool.Pool
 
 func ConnectDB() error {
-	databaseUrl := "postgres://cv_auth_backend:pass-cv1234@localhost:5432/users"
+	databaseUrl := "postgres://cv_auth_backend:pass-cv1234@db:5432/users"
 	var err error
 	DB, err = pgxpool.New(context.Background(), databaseUrl)
 	return err
